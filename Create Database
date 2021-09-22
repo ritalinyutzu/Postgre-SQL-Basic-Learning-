@@ -1,0 +1,38 @@
+create table df1 (
+    student text
+    , math integer
+    , chinese integer
+    , english integer
+    , science integer
+    , society integer
+);
+
+create table df2 (
+    student text
+    , performance text  
+    , overall integer
+    , conclusion text
+);
+
+create table df3 (
+    overall integer
+    , socre_level text
+ );
+
+insert into df1 (student,math,chinese,english,science,society) values 
+('Rita',85,95,68,80,90),
+('Sula',95,80,95,90,90),
+('Tommy',78,95,99,70,80),
+('Yuhan',80,95,95,69,70),
+('Melody',58,70,100,75,75),
+('Rose',65,80,96,73,82),
+('Milk',97,73,83,92,72);
+
+insert into df2 (student,performance,overall,conclusion) values 
+('Rita','積極參與班級活動',80,'調皮搗蛋，喜歡捉弄同學'),
+('Sula','對於政治議題較激進',83,'個性穩定，與同學相處和樂'),
+('Tommy','積極參與流浪動物社，愛護動物',90,'個性害羞，不擅與陌生人打交道'),
+('Yuhan','班上風紀股長，協助處理班級事務',95,'積極進取，學習優秀'),
+('Melody','數學程度仍待加強',96,'樂觀開朗善良，願意幫助同學'),
+('Rose','建立穩定出國計畫',85,'使用手機不當，家長應多注意'),
+('Milk','跨系所優秀學生',80,'上課喜歡睡覺，多次提醒應加以改善');
