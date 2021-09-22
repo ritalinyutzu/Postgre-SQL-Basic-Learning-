@@ -1,0 +1,38 @@
+-- Suggest using http://sqlfiddle.com/ to deal with this database
+
+select *
+from df1
+
+-- only select the column of student
+SELECT DISTINCT student
+FROM df1
+WHERE 1=1 
+
+-- culculate student's number
+select count(student)
+from df1
+where 1=1
+
+-- average score of math of the class
+select avg(math)
+from df1
+where 1=1
+
+-- how much students fail on math 
+select count(math)
+from df1
+where math<=60
+
+-- need to debug (inner join)
+select
+  a.student,a.math,a.chinese,a.english,a.science,a.society
+from df1 as a
+  inner join df2
+on a.student = df2.student;
+
+-- full join
+select
+  df1.student,math,chinese,english,science,society
+from df1
+  full join df2
+on df1.student = df2.student;
