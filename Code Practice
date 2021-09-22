@@ -3,6 +3,12 @@
 select *
 from df1
 
+select "Avg_class" as student, avg(math),avg(chinese),avg(english),avg(science),avg(society)
+from df1
+
+
+
+
 -- only select the column of student
 SELECT DISTINCT student
 FROM df1
@@ -13,10 +19,21 @@ select count(student)
 from df1
 where 1=1
 
--- average score of math of the class
-select avg(math)
+-- average score of the class
+-- method01
+select *
 from df1
-where 1=1
+Union all
+select 'avg_class' as student ,avg(math),avg(chinese),avg(english),avg(science),avg(society)
+from df1
+
+-- method02
+select 'avg_class' as student ,avg(math),avg(chinese),avg(english),avg(science),avg(society)
+from df1
+union all
+select *
+from df1
+
 
 -- how much students fail on math 
 select count(math)
@@ -36,3 +53,5 @@ select
 from df1
   full join df2
 on df1.student = df2.student;
+
+
