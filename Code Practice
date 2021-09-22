@@ -40,7 +40,7 @@ select count(math)
 from df1
 where math<=60
 
--- need to debug (inner join)
+-- inner join
 select
   a.student,a.math,a.chinese,a.english,a.science,a.society
 from df1 as a
