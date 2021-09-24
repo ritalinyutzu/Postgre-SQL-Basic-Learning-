@@ -1,15 +1,6 @@
 -- Suggest using http://sqlfiddle.com/ to deal with this database
 -- Using Postgre SQL 9.6 Version
 
-select *
-from df1
-
-select "Avg_class" as student, avg(math),avg(chinese),avg(english),avg(science),avg(society)
-from df1
-
-
-
-
 -- only select the column of student
 SELECT DISTINCT student
 FROM df1
