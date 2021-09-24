@@ -61,13 +61,10 @@ from df1
   full join df2
 on df1.student = df2.student;
 
--- full join df1,df2,df3 (need to check by Vic)
-select df1.student,math, chinese,english,sience,society
+-- full join df1,df2,df3
+select df1.student,df1.math,df1.chinese,df1.english,df1.science,df1.society
 from df1
-  full join df2
+full join df2
   on df1.student = df2.student
-select df2.student,df2.performance,df2.overall,df2.conclusion
-from df2
-  full join df3
-  on df2.overall = df3.overall
-  
+full join df3
+   on df2.overall = df3.overall;
