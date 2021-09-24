@@ -10,13 +10,13 @@ create table df1 (
 create table df2 (
     student text
     , performance text  
-    , overall integer
+    , overall text
     , conclusion text
 );
 
 create table df3 (
-    overall integer
-    , socre_level text
+    overall text
+    , score_level text
  );
 
 insert into df1 (student,math,chinese,english,science,society) values 
@@ -36,3 +36,12 @@ insert into df2 (student,performance,overall,conclusion) values
 ('Melody','數學程度仍待加強',96,'樂觀開朗善良，願意幫助同學'),
 ('Rose','建立穩定出國計畫',85,'使用手機不當，家長應多注意'),
 ('Milk','跨系所優秀學生',80,'上課喜歡睡覺，多次提醒應加以改善');
+
+insert into df3(overall,score_level) values
+('調皮搗蛋，喜歡捉弄同學','A'),
+('個性穩定，與同學相處和樂','A'),
+('個性害羞，不擅與陌生人打交道','A+'),
+('積極進取，學習優秀','A+'),
+('樂觀開朗善良，願意幫助同學','A+'),
+('使用手機不當，家長應多注意','A'),
+('上課喜歡睡覺，多次提醒應加以改善','A');
