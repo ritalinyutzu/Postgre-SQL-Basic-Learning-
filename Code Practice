@@ -62,7 +62,9 @@ from df1
 on df1.student = df2.student;
 
 -- full join df1,df2,df3
-select df1.student,df1.math,df1.chinese,df1.english,df1.science,df1.society
+select df1.student,df1.math,df1.chinese,df1.english,df1.science,df1.society,
+       df2.student,df2.performance,df2.overall,df2.conclusion,
+       df3.overall,df3.score_level
 from df1
 full join df2
   on df1.student = df2.student
