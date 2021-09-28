@@ -1,6 +1,15 @@
 -- Suggest using http://sqlfiddle.com/ to deal with this database
 -- Using Postgre SQL 9.6 Version
 
+select *
+from df1
+
+select "Avg_class" as student, avg(math),avg(chinese),avg(english),avg(science),avg(society)
+from df1
+
+
+
+
 -- only select the column of student
 SELECT DISTINCT student
 FROM df1
@@ -33,9 +42,9 @@ from df1
 where math<=60
 
 -- who fail on math (need to check check by Vic)
-select name,avg(math)
+select student,avg(math)
   from df1
-group by name
+group by student
   having math<=60
 
 -- inner join
@@ -61,3 +70,20 @@ full join df2
   on df1.student = df2.student
 full join df3
    on df2.overall = df3.overall;
+ 
+ -- full join df1,df2,df3, test method 2
+select a.student,
+       a.math,
+       a.chinese,
+       a.english,
+       a.science,
+       a.society,
+       b.performance,
+       b.overall,
+       b.conclusion,
+       c.score_level
+from df1 a
+full join df2 b
+  on a.student = b.student
+full join df3 c
+   on b.overall = c.overall;
